@@ -121,7 +121,7 @@ public class C5_GroupBy {
 		// The IntSummaryStatistics object for each type contains the count, sum,
 		// average, min and max values for the likes attribute. Additional summary
 		// objects exist for double and long values.
-		likeStatisticsPerType.values().stream().forEach(action);
+		
 	}
 }
 
