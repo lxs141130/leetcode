@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collector;
+import java.util.stream.Stream;
 
 /**
  * @author franksun
@@ -25,6 +26,15 @@ public class test {
 
 		LinkedList<Product> linkedListOfPersons = productList.stream().collect(toLinkedList);
 		System.out.println(linkedListOfPersons);
+		
+		Stream<Product> streamOfCollection1 = productList.parallelStream();
+		boolean isParallel = streamOfCollection1.isParallel();
+		boolean bigPrice = streamOfCollection1
+		  .map(product -> product.getPrice() * 12)
+		  .anyMatch(price -> price > 200);
+		
+		System.out.println(isParallel);
+		System.out.println(bigPrice);
 	}
 
 	

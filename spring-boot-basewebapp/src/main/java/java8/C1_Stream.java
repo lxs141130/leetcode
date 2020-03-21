@@ -252,4 +252,13 @@ public class C1_Stream {
 			});
 
 	LinkedList<Product> linkedListOfPersons = productList.stream().collect(toLinkedList);
+	
+	
+	//Parallel Streams
+	
+	Stream<Product> streamOfCollection1 = productList.parallelStream();
+	boolean isParallel = streamOfCollection1.isParallel();
+	boolean bigPrice = streamOfCollection1
+	  .map(product -> product.getPrice() * 12)
+	  .anyMatch(price -> price > 200);
 }
