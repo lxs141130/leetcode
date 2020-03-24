@@ -41,25 +41,25 @@ public class Functional_Interfaces {
 //In this case, you will get a compile-time error:
 //interface Foo inherits unrelated defaults for defaultCommon() from types Baz and Bar...
 
-@FunctionalInterface
-interface FooExtended extends Baz, Bar {
-}
+// @FunctionalInterface
+// interface FooExtended extends Baz, Bar {
+// }
 
-@FunctionalInterface
-interface Baz {
-	String method();
+// @FunctionalInterface
+// interface Baz {
+// 	String method();
 
-	default void defaultCommon() {
-	}
-}
+// 	default void defaultCommon() {
+// 	}
+// }
 
-@FunctionalInterface
-interface Bar {
-	String method();
+// @FunctionalInterface
+// interface Bar {
+// 	String method();
 
-	default void defaultCommon() {
-	}
-}
+// 	default void defaultCommon() {
+// 	}
+// }
 
 //To fix this.
 //But be careful. Adding too many default methods to the interface is not a very good architectural decision. 
