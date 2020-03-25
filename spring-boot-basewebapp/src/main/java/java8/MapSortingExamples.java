@@ -1,4 +1,4 @@
-package com.example.learning;
+package java8;
 
 import java.util.Collections;
 import java.util.Comparator;
