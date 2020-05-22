@@ -14,6 +14,18 @@ import java.util.stream.Stream;
  */
 public class test {
 	public static void main(String[] args) {
+		
+		
+		double a = Double.NaN;
+		double b = Double.NaN;
+		
+		Double x = (Double) a;
+		Double y = (Double) b;
+		
+		
+		
+		System.out.println(a == b);
+		System.out.println(x.equals(y));
 
 		List<Product> productList = Arrays.asList(new Product(23, "potatoes"), new Product(14, "orange"),
 				new Product(13, "lemon"), new Product(23, "bread"), new Product(13, "sugar"));
